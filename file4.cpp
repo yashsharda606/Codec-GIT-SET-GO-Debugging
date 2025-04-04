@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void recursive(int count) {
-    if(count==0)return;
-    cout << "Calling function\n";
-    recursive(count-1);  
+void repeatMessage(int count, const string& message) {
+    if (count == 0) return;
+    cout << message << endl;
+    repeatMessage(count - 1, message);
 }
 
 int main() {
-    recursive(5);
+    repeatMessage(5, "Calling function");
     return 0;
 }
