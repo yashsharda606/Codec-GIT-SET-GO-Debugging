@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void recursive() {
+void recursive(int count) {
+    if(count==0)return;
     cout << "Calling function\n";
-    recursive();  
+    recursive(count-1);  
 }
 
 int main() {
-    recursive();
+    recursive(5);
     return 0;
 }
